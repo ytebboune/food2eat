@@ -28,24 +28,36 @@
 	background: linear-gradient(to bottom, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	}
 	.head{float:left;width:100%;}
-	.search-box{width:90%; margin:0 auto 40px; box-shadow:10px 13px 0 rgba(0,0,0,0.2);}
-	.listing-block{background:#fff; padding-top:20px;}
+	.search-box{width:90%; margin:0 auto 40px;}
+	.listing-block{border: 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 6px;
+    color: rgba(0, 0, 0, 0.87);
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    padding:0px;
+}
 	.slimScrollDiv{width:41%!important;}
 	.media {background:#fff; position:relative; margin-bottom:15px;}
-	.media img{width:200px;margin:0; height:136px;}
+	.img-recette{width:100%;margin:0; max-width: 100%;}
+	.img-recette img{width:100%;margin:0;   border-radius: 8px;}
 	.media-body{border:1px solid #bcbcbc; border-left:0; height:136px;}
-	.media .price{float:left; width:100%; font-size:30px;font-weight:600; color:#4765AB;}
-	.media .price small{display:block; font-size:17px; color:#232323;}
-	.media .stats{float:left; width:100%; margin-top:10px;}
-	.media .stats span{float:left; margin-right:10px; font-size:15px;}
-	.media .stats span i{margin-right:7px; color:#4765AB;}
-	.media .address{float:left; width:100%;font-size:14px; margin-top:5px; color:#888;}
-	.media .fav-box{position:absolute; right:10px; font-size:20px; top:4px; color:#E74C3C;}
+	.nom-recette {display:block; font-size:17px; color:#455aa0; font-weight:500; text-transform:uppercase; padding:10px 5px;}
+	.infos-recettes{ padding:7px 2px; }
+	.lien-page { color: #455aa0!important; font-weight:500;}
 
 	.map-box{background-color:#A3CCFF;}
+	.avis-clients-row{    align-items: center;
+    justify-content: center;
+width:inherit;!important;
+}
+	.couleur-bleue{ color: #455aa0!important; }
+
 </style>
 
-<body style="background-color:#DAA520">
+<body style="background-color:#DAA520;background-attachment:fixed;">
   <nav class="navbar navbar-expand-lg bg-info">
     <div class="container" >
       <div class="navbar-translate" >
@@ -83,7 +95,7 @@
         </div>
       </div>
     </div>
-    <div class="container" id="sectionRecherche" style="display: none;">
+    <div class="container" id="sectionRecherche" style="display: none;margin-top: 20px;">
         <div class="row">
           <div class="col-lg-12 col-md-12 ml-auto mr-auto">
             <div class="card card-login">
@@ -203,93 +215,42 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid search-box" id="resultatsRecherchés" style="display:none;">
+      <div class="container-fluid search-box" id="resultatsRecherchés">
 	<div class="row">
-		<div class="col-md-12 listing-block">
-        <div class="media">
-            <div class="fav-box">
-</div>
-              <img class="d-flex align-self-start" src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Generic placeholder image">
-              <div class="media-body pl-3">
-                <div class="price">$799,000<small>New York</small></div>
-                <div class="stats">
-                    <span><i class="fa fa-arrows-alt"></i>1678 Sq ft</span>
-                    <span><i class="fa fa-bath"></i>2 Beadrooms</span>
-                </div>
-                <div class="address">4062 Walnut Hill Drive
-            Cincinnati</div>
-              </div>
-            </div>
-        <div class="media">
-            <div class="fav-box">
-</div>
-              <img class="d-flex align-self-start" src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Generic placeholder image">
-              <div class="media-body pl-3">
-                <div class="price">$506,400<small>New York</small></div>
-                <div class="stats">
-                    <span><i class="fa fa-arrows-alt"></i>1678 Sq ft</span>
-                    <span><i class="fa fa-bath"></i>2 Beadrooms</span>
-                </div>
-                <div class="address">4062 Walnut Hill Drive
-            Cincinnati</div>
-              </div>
-            </div>
-        <div class="media">
-            <div class="fav-box">
-</div>
-              <img class="d-flex align-self-start" src="https://images.pexels.com/photos/358636/pexels-photo-358636.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Generic placeholder image">
-              <div class="media-body pl-3">
-                <div class="price">$506,400<small>New York</small></div>
-                <div class="stats">
-                    <span><i class="fa fa-arrows-alt"></i>1678 Sq ft</span>
-                    <span><i class="fa fa-bath"></i>2 Beadrooms</span>
-                </div>
-                <div class="address">4062 Walnut Hill Drive
-            Cincinnati</div>
-              </div>
-            </div>
-        <div class="media">
-            <div class="fav-box">
-</div>
-              <img class="d-flex align-self-start" src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Generic placeholder image">
-              <div class="media-body pl-3">
-                <div class="price">$799,000<small>New York</small></div>
-                <div class="stats">
-                    <span><i class="fa fa-arrows-alt"></i>1678 Sq ft</span>
-                    <span><i class="fa fa-bath"></i>2 Beadrooms</span>
-                </div>
-                <div class="address">4062 Walnut Hill Drive
-            Cincinnati</div>
-              </div>
-            </div>
-        <div class="media">
-            <div class="fav-box">
-</div>
-              <img class="d-flex align-self-start" src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Generic placeholder image">
-              <div class="media-body pl-3">
-                <div class="price">$506,400<small>New York</small></div>
-                <div class="stats">
-                    <span><i class="fa fa-arrows-alt"></i>1678 Sq ft</span>
-                    <span><i class="fa fa-bath"></i>2 Beadrooms</span>
-                </div>
-                <div class="address">4062 Walnut Hill Drive
-            Cincinnati</div>
-              </div>
-            </div>
-        <div class="media">
-            <div class="fav-box">
-</div>
-              <img class="d-flex align-self-start" src="https://images.pexels.com/photos/358636/pexels-photo-358636.jpeg?h=350&auto=compress&cs=tinysrgb" alt="Generic placeholder image">
-              <div class="media-body pl-3">
-                <div class="price">$506,400<small>New York</small></div>
-                <div class="stats">
-                    <span><i class="fa fa-arrows-alt"></i>1678 Sq ft</span>
-                    <span><i class="fa fa-bath"></i>2 Beadrooms</span>
-                </div>
-                <div class="address">4062 Walnut Hill Drive
-            Cincinnati</div>
-              </div>
-            </div>
+			<div class="col-md-4 listing-block">
+					<div class="col-sm-12 nom-recette">
+						Recette du couscous oriental
+					</div>
+					<div class="col-sm-6 img-recette">
+						              <img class="d-flex align-self-start" src="https://www.tipiak.fr/sites/default/files/styles/image_detail/public/recettes/images/Couscous-marocain-TIPIAK.jpg?itok=Ez-4eRy5" alt="Generic placeholder image">
+					</div>
+					
+					<div class="row infos-recettes">
+						<div class="col-sm-5 prix-recette">
+							<strong>Prix</strong> : 12 €
+						</div>
+						<div class="col-sm-7 temps-recette">
+							<strong>Temps</strong> : 2 heures
+						</div>
+					</div>
+					<div class="row infos-recettes">
+						<div class="col-sm-12" style="padding: 0;">
+						<div class="row avis-clients-row"> 
+							<strong>Avis :</strong>
+				    		<!--<i class="material-icons">star</i>
+				    		<i class="material-icons">star</i>
+				    		<i class="material-icons">star</i>
+				    		<i class="material-icons">star_half</i>
+				    		<i class="material-icons">star_border</i>-->
+				    		<div class="avis-clients"></div>
+				    	</div>
+						</div>
+					</div>
+					<div class="">
+						                  <a href="" class="btn btn-primary btn-link btn-wd btn-lg lien-page">Aller vers la recette</a>
+
+					</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -331,6 +292,8 @@
 			$( "#blockRecherche" ).toggle();
 		});
 		$("#rateYo").rateYo();
+				$(".avis-clients").rateYo();
+
 		$( "#rechercheAvancee" ).click(function() {
 			$( "#sectionRecherche" ).toggle();
 		});
